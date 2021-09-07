@@ -1,0 +1,36 @@
+@headingFont: "Lora", serif;
+@textFont: "Montserrat", sans-serif;
+:host {
+  ::ng-deep {
+    .navmenu {
+      .navbar {
+        background-color: rgba(0, 0, 0, 0.5) !important;
+        .navbar-brand {
+          font-family: @headingFont;
+          color: #fff !important;
+          letter-spacing: 1px;
+          font-size: 30px;
+        }
+        .collapse {
+          ul {
+            li {
+              a {
+                font-family: @headingFont;
+                color: #fff !important;
+                letter-spacing: 1px;
+                font-size: 20px;
+              }
+            }
+          }
+          .logout {
+            text-decoration: none;
+            font-family: @headingFont;
+            color: #fff !important;
+            letter-spacing: 1px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

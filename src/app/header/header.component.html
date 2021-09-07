@@ -1,0 +1,38 @@
+<div class="navmenu">
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['/']" routerLinkActive="router-link-active"  data-aos="zoom-in">Coding Test</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item" data-aos="zoom-in">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/']" routerLinkActive="router-link-active" >Home</a>
+          </li>
+          <li class="nav-item" data-aos="zoom-in">
+            <a class="nav-link" [routerLink]="['addpost']" routerLinkActive="router-link-active" >AddPost</a>
+          </li>
+          <li class="nav-item" data-aos="zoom-in">
+            <a class="nav-link" [routerLink]="['timeline']" routerLinkActive="router-link-active" >Post</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <a
+          class="logout"
+          href=""
+          >LogOut</a
+        >
+        </form>
+      </div>
+    </div>
+  </nav>
+</div>

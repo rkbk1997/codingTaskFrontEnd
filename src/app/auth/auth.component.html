@@ -1,0 +1,32 @@
+<div class="login">
+    <div class="row w-100">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <form autocomplete="off">
+                <div class="loginform" >
+                    <h1>{{formType === 'login' ? 'Login Here..' : 'Register Here..'}}</h1>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                      <div class="input-group mb-2">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock"></i></span>
+                        <input [type]="inputType" class="form-control" placeholder="password" aria-label="Username" aria-describedby="basic-addon1">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i (click)="changeType()" style="cursor: pointer;" class="fa fa-{{ inputType == 'password' ? 'eye' : 'eye-slash' }}"></i>
+                        </span>
+                      </div>
+                      <input  type="button" class="btn btn-success w-100 " [value]="formType == 'login' ? 'Login' :'Register' ">
+                      <ng-template [ngIf]= "formType == 'login'">
+                          <a class="mt-1" [routerLink]="['/register']" routerLinkActive="router-link-active"  id="noaccount">No account? Register Here...</a>
+                      </ng-template>
+                      <ng-template [ngIf]= "formType != 'login' ">
+                        <a class="mt-1" [routerLink]="['/']" routerLinkActive="router-link-active"  id="noaccount">Already account? Login Here...</a>
+                    </ng-template>
+
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
