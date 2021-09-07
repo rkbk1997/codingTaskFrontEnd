@@ -44,7 +44,21 @@ export class AuthComponent implements OnInit {
                 this.router.navigate(['/']);
               }
             })
+          }else{
+            Swal.fire({
+              title: 'User Already Register ',
+              text: '',
+              icon: 'warning',
+              showCancelButton: false,
+              confirmButtonText: 'close ',
+              cancelButtonText: ''
+            }).then((result) => {
+              if (result.isConfirmed) {
+                this.router.navigate(['/register']);
+              }
+            })
           }
+
         },
         err => {
           Swal.fire({
