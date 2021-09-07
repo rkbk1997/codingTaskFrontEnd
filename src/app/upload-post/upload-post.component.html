@@ -1,26 +1,58 @@
 <div class="login">
-    <div class="row w-100">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-            <form autocomplete="off">
-                <div class="loginform" >
-                    <h1 >Create Post</h1>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-info"></i></span>
-                        <input type="text" class="form-control" placeholder="Title" aria-label="Username" aria-describedby="basic-addon1">
-                      </div>
-                      <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-info"></i></span>
-                        <textarea name="" id="" cols="" rows="4" class="form-control" placeholder="Descriptions">Descriptions</textarea>
-                      </div>
-                      <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-file"></i></span>
-                        <input type="file" class="form-control" placeholder="password" aria-label="Username" aria-describedby="basic-addon1">
-                      </div>
-                      <input  type="button" class="btn btn-success w-100 mb-4" value="Save">
-                </div>
-            </form>
+  <div class="row w-100">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <form autocomplete="off" [formGroup]="form" (ngSubmit)="CreatePost()">
+        <div class="loginform">
+          <h1>Create Post</h1>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"
+              ><i class="fa fa-info"></i
+            ></span>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="postTitle"
+              placeholder="Title"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"
+              ><i class="fa fa-info"></i
+            ></span>
+            <textarea
+              name=""
+              id=""
+              cols=""
+              rows="4"
+              formControlName="descriptions"
+              class="form-control"
+              placeholder="Descriptions"
+            >
+Descriptions</textarea
+            >
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"
+              ><i class="fa fa-file"></i
+            ></span>
+            <input
+              type="file"
+              enctype="multipart/form-data"
+              class="form-control"
+              (change)="handleFileInput($event)"
+            />
+          </div>
+          <input
+            type="submit"
+            class="btn btn-success w-100 mb-4"
+            value="Save"
+          />
         </div>
-        <div class="col-md-3"></div>
+      </form>
     </div>
+    <div class="col-md-3"></div>
+  </div>
 </div>
