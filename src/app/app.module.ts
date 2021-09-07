@@ -9,6 +9,7 @@ import { UploadPostComponent } from './upload-post/upload-post.component';
 import { HeaderComponent } from './header/header.component';
 import { PostCardComponent } from './timeline/post-card/post-card.component';
 import { HttpClientModule} from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,9 @@ import { HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

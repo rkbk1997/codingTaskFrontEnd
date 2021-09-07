@@ -16,8 +16,11 @@ export class CommonService {
   constructor(private http: HttpClient) { }
 
   registations(payload: Object): Observable<any>{
-    return this.http.post( this.backendUrl + '/public.register' ,payload);
+    return this.http.post( this.backendUrl + '/public/register' ,payload);
   }
 
+  login(payload: Object): Observable<any>{
+    return this.http.post( this.backendUrl + '/public/login', payload);
+  }
 
 }
