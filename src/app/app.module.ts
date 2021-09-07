@@ -8,7 +8,8 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { UploadPostComponent } from './upload-post/upload-post.component';
 import { HeaderComponent } from './header/header.component';
 import { PostCardComponent } from './timeline/post-card/post-card.component';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,14 +17,16 @@ import { HttpClientModule} from '@angular/common/http';
     TimelineComponent,
     UploadPostComponent,
     HeaderComponent,
-    PostCardComponent
+    PostCardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
